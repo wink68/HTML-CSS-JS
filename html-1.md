@@ -1,4 +1,5 @@
 ## 오늘 공부한 것
+   * 공부일: 2022.07.20
 ## 1. html
 * VS코드 사용법
   * extensions → live server  (chrome창에서 만든 화면 구현)
@@ -30,7 +31,7 @@
 * 굵게 강조 : ```<strong> 내용 </strong>```   
    → ```<b> </b>```와 다르게 화면 낭독기에서 강조해줌
 * 진하게 (볼드) : ```<b> 내용 </b>```
-* 기울기 : ```<em> 내용 </em>```
+* 기울기 (강조) : ```<em> 내용 </em>```
 * 가로줄 : ```<hr>```
 <hr>
 
@@ -75,32 +76,94 @@
 ```
 <hr>
 
-### (4) 이미지 삽입
+### (4-1) 이미지 삽입
 * 기본 태그   
 ```<img src="이미지 파일 경로" alt="대체용 텍스트">```   
 : 대체용 텍스트 : 시각 장애인용 텍스트   
 
-* 하위 폴더에 있는 이미지
+* 하위 폴더에 있는 이미지   
 ```<img src="하위폴더명/이미지 파일 경로" alt="대체용 텍스트">```   
+<br>
 
 * 크기 조절 (width, height)
-종류|예시
-First Header | Second Header 
------------- | ------------- 
-Content cell 1 | Content cell 2 
-Content column 1 | Content column 2
+
+| 종류 | 설명 | 예시 |
+| -------- | :------: | -------- |
+| %  | 웹브라우저 창을 기준으로 결정 | width="50%" |
+|px  | 픽셀 크기만큼 표시 | width="150" |
+
 <br>
 
-### (5) 오디오 삽입
-* 기본 태그
+### (4-2) 오디오 삽입
+* 기본 태그   
 ```<audio src="오디오 파일 경로"></audio>```   
 
-* 재생 막대 (controls)
-```<audio src="오디오 파일 경로" controls></audio>```
+* 재생 막대 (controls)   
+```<audio src="오디오 파일 경로" controls></audio>```   
+* 크기 조절 (width, height)
 <br>
 
-### (6) 비디오 삽입
-* 기본 태그
+### (4-3) 비디오 삽입
+* 기본 태그   
 ```<video src="오디오 파일 경로"></video>```   
 
-* 재생 막대 (controls)
+* 재생 막대 (controls)   
+* 크기 조절 (width, height)
+<br>
+
+* audio, video 태그
+
+| 종류 | 설명 |
+| -------- | -------- |
+| autoplay | 자동 재생 |
+| loop | 반복 재생 |
+| muted | 소리 제거 |
+| poster="파일 이름" | 비디오 썸네일 사진 |
+
+```
+ex>
+<audio src="파일 경로" autoplay loop poster="파일 이름"></audio>
+```
+<br>
+
+### (4-4) embed
+: 오디오, 비디오, 이미지 등 다양한 멀티미디어 삽입
+```
+<embed src="파일 경로" width="너비" height="높이">
+
+ex>
+<embed src="medias/salad.mp4" controls width="700" height="500">
+```
+<hr>
+
+### (5) 하이퍼링크
+* 기본 태그   
+```<a href="링크할 주소">텍스트 or 이미지</a>```
+<br>
+
+* 텍스트 링크   
+```
+<div>
+  <p><a href="링크">텍스트</a></p>
+</div>
+```
+
+* 이미지 링크
+```
+<a href="링크"<img src="이미지 주소" alt="대체 텍스트"></a>
+```
+
+* ex>   
+```
+<div id="container">
+  <a href="index.html"><img src="images/tangerines.jpg" alt="레드향" width="300"></a>
+  <p><a href="embed.html">멀티미디어 삽입하기</a></p>
+</div>
+```
+
+* 새 탭에서 열리기
+   * target="_blank"
+```
+<div>
+  <p><a href="링크" target="_blank">텍스트</a></p>
+```
