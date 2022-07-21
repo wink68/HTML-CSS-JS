@@ -1,5 +1,12 @@
 ## 오늘 공부한 것
    * 공부일: 2022.07.20
+<br>
+
+### ◇ 참고 자료   
+- 마크 다운 기초 문법 : https://poorman.tistory.com/352
+- 표 만들기: https://poorman.tistory.com/352
+<br>
+
 ## 1. html
 * VS코드 사용법
   * extensions → live server  (chrome창에서 만든 화면 구현)
