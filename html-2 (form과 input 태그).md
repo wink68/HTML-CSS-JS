@@ -88,8 +88,8 @@ ex1>
 <br>
 
 * label 태그와 form 요소를 따로 쓸 때   
-```<label for="id명">레이블명</label>```   
-```<input id="id명">```
+__```<label for="id명">레이블명</label>```__   
+__```<input id="id명">```__
 
 ```
 ex1>
@@ -130,11 +130,13 @@ https://youtu.be/_4upG-03td8
 #### ① 전송 / 리셋 버튼
 __◇ 전송 버튼 submit__   
 : 입력한 정보를 서버로 전송하는 버튼   
-* 기본 태그 : ```<input type="submit" value="버튼 이름">```   
+* 기본 태그 : __```<input type="submit" value="버튼 이름">```__   
+<br>
 
 __◇ 리셋 버튼 reset__   
 : 입력한 정보를 리셋하는 버튼   
-* 기본 태그 : ```<input type="reset" value="버튼 이름">```   
+* 기본 태그 : __```<input type="reset" value="버튼 이름">```__   
+<br>
 
 __ex>__   
 ```
@@ -256,7 +258,7 @@ __ex>__
 
 #### ⑤-1 버튼 생성
 * __버튼 생성 1__   
-   * 기본 태그 : ```<input type="button" value="버튼에 표시할 내용">```   
+   * 기본 태그 : __```<input type="button" value="버튼에 표시할 내용">```__   
    * 자바스크립트 함수 ```window.open()```   
 
 __ex>__   
@@ -280,7 +282,7 @@ __ex>__
 <br>
 
 #### ⑤-2 이미지 버튼 생성
-   * 기본 태그 : ```<input type="image" src="이미지 경로" alt="대체 텍스트">```   
+   * 기본 태그 : __```<input type="image" src="이미지 경로" alt="대체 텍스트">```__   
 
 __ex>__   
 ```
@@ -293,7 +295,7 @@ __ex>__
 <br>
 
 #### ⑤-3 파일첨부 버튼 생성
-   * 기본 태그 : ```<input type="file">```   
+   * 기본 태그 : __```<input type="file">```__   
 
 __ex>__   
 ```
@@ -314,7 +316,7 @@ __ex>__
 ex> 회원가입한 시간, 지역, 들어온 경로 등
 <br>
 
-* 기본 태그 : ```<input type="hidden" name="이름" value"서버로 전송할 값">```
+* 기본 태그 : __```<input type="hidden" name="이름" value"서버로 전송할 값">```__   
 
 __ex>__
 ```
