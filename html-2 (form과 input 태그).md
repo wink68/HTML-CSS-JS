@@ -89,11 +89,15 @@ https://youtu.be/_4upG-03td8
 ### (3) 다양한 input 태그
 | 종류 | 설명 |
 | -------- | -------- |
+| url | url 주소 입력 |
 | email | 이메일 주소 입력 |
 | tel | 전화번호 입력 |
 | submit | 전송 버튼 |
 | reset | 리셋 버튼 |
-| checkbox | 체크 박스 생성 |
+| checkbox | 2개 이상 선택 가능  박스 생성 |
+| radio | 1개만 선택할 수 있는 선택 박스 생성 |
+| number, range | 화살표(막대)로 갯수 조절 |
+| date, month, week, time | 날짜, 시간 |
 | button | 버튼 생성 |
 | image | 이미지 버튼 생성 |
 | file | 파일 첨부 버튼 생성 |
