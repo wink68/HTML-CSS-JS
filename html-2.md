@@ -131,14 +131,25 @@ __ex>__
 ```
 
 #### ②-2 radio
-: 선택지 (1개만 선택 가능)   
+* 선택지 (1개만 선택 가능)   
 : __name__ : 서버로 전송될 이름   
 : __value__ : 서버로 전송될 값
 ```
 <p><b>포장 선택</b></p>
 <label><input type="radio" name="gift" value="yes">선물 포장</label>
 <label><input type="radio" name="gift" value="no">선물 포장 안함</label>
+```   
+
+* __```checked```__   
+: 선택지 중 자동으로 처음 설정   
 ```
+  <legend>이벤트와 새로운 소식</legend>
+  <input type="radio" name="mailing" id="mailing_y" value="mailing_yes">
+  <label for="mailing_y">메일 수신</label>
+  <input type="radio" name="mailing" id="mailing_n" value="mailing_no" checked>
+  <label for="mailing_n">메일 수신 안 함</label>  
+```   
+
 #### ◇ 참고 자료   
 - name : https://youtu.be/sFtZdlmgCVY (08:30)   
 : 서버로 전송할 때, name으로  값이 전송됨
