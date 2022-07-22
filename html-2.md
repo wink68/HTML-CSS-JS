@@ -132,8 +132,8 @@ __ex>__
 
 #### ②-2 radio
 * 선택지 (1개만 선택 가능)   
-: __name__ : 서버로 전송될 이름   
-: __value__ : 서버로 전송될 값
+: __```name```__ : 서버로 전송될 이름   
+: __```value```__ : 서버로 전송될 값
 ```
 <p><b>포장 선택</b></p>
 <label><input type="radio" name="gift" value="yes">선물 포장</label>
