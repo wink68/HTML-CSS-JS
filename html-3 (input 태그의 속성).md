@@ -65,18 +65,47 @@ __ex>__
   <input type="password" id="pwd1" placeholder="문자와 숫자, 특수 기호 포함" required> 
 ```
 <br>
+<hr>
 
-#### ⑥ 선택항목 select / option   
-: ```value``` : 서버로 넘겨줄 값
-: ```slected``` : 처음 보여지는 옵션   
+#### ⑥-1 선택항목 select / option   
+: __```value```__ : 서버로 넘겨줄 값   
+: __```slected```__ : 처음 보여지는 옵션   
+: __```multiple```__ : 2개 이상 옵션 선택할 때   
 
-__ex>__   
+__ex1>__   
 ```
   <select>
     <option value="special_3" selected>선물용 3kg</option>
-    <option value+"special_5">선물용 5kg</option>
-    <option value+"family_3">가정용 3kg</option>
+    <option value="special_5">선물용 5kg</option>
+    <option value="family_3">가정용 3kg</option>
   </select>
 ```
 
-⑦
+__ex2>__   
+```
+  <select name="drink" multiple>
+    <option value="1" selected>콜라</option>
+    <option value="2">사이다</option>
+    <option value="3">생수</option>
+  </select>
+```
+<br>
+
+#### ⑥-2 데이터 목록 datalist
+* 기본 태그:   
+```
+  <input type="text" list="데이터 목록 id">
+  <datalist id="데이터 목록 id">
+    <option value="서버로 넘길 값1">선택 옵션1</option>
+    <option value="서버로 넘길 값2">선택 옵션2</option>
+  </datalist>
+```
+<br>
+
+__◆ select와 datalist 차이점__
+* 수백개 option중 검색으로 찾을 수 있음   
+* option에 없는 잘못된 값을 입력할 위험이 존재   
+* 수십개의 select박스보다 메모리를 덜 차지하고 속도도 더 빠름   
+
+#### ◇ 참고자료
+https://youtu.be/MZkeA62Fo7U (02:34)   
