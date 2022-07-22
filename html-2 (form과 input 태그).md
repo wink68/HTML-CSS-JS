@@ -19,7 +19,7 @@ ex> date input type (~ input type)
 ```<form [속성="속성값"]>여러 폼 요소</form>```
 <br>
 
-* __```form action=""```__   
+### (1) ```form action=""```   
 : 서버로 데이터를 보낼 때
 ```
 ex> 로그인 값을 보낼 때
@@ -28,7 +28,29 @@ ex> 로그인 값을 보낼 때
 #### ◇ 참고 자료   
 https://youtu.be/sFtZdlmgCVY (05:34, 08:48)
 <br>   
+<br>
+
+### (2) ```fieldset```, ```legend``` 태그
+: 테두리가 있는 입력 양식
+
+#### ① fieldset
+: 박스 테두리 생성
+
+#### ② legend
+: 박스의 제목 생성
+
+* 기본 태그
+```
+<form action="">
+  <fieldset>
+    <legend>그룹 제목</legend>
+  </fieldset>
+```
+#### ◇ 참고 자료  
+https://youtu.be/5cl0bNdPmOU
+
 <br>   
+<hr>
 
 ### 2) input 태그
 : 입력할 때
@@ -89,6 +111,7 @@ https://youtu.be/_4upG-03td8
 ### (3) 다양한 input 태그
 | 종류 | 설명 |
 | -------- | -------- |
+| search | 검색창 |
 | url | url 주소 입력 |
 | email | 이메일 주소 입력 |
 | tel | 전화번호 입력 |
