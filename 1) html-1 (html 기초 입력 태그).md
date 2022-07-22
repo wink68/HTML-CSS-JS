@@ -3,7 +3,7 @@
 <br>
 
 ### ◇ 참고 자료   
-- 마크 다운 기초 문법 : https://poorman.tistory.com/352
+- 마크 다운 기초 문법 : https://naver.me/F5u0mRdo
 - 표 만들기: https://poorman.tistory.com/352
 <br>
 
