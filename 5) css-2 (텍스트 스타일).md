@@ -272,3 +272,113 @@ __ex>__
 <hr>
 
 ### (4) 목록 스타일   
+#### ◆ 목록 스타일 속성값
+| 종류 | 설명 | 예시 |
+| -------- | -------- | -------- |
+| disc | 꽉 찬 원 모양 | ● |
+| circle | 텅 빈 원 모양 | ○ | 
+| square | 꽉 찬 사각형 | ■ |
+| decimal | 1부터 시작하는 리스트 | 1, 2, 3... |
+| decimal-leading-zero | 앞에 0이 붙는 숫자 리스트 | 01, 02, 03... |
+| lower-roman | 로마숫자 소문자 리스트 | ⅰ, ⅱ, ⅲ... |
+| upper-roam | 로마숫자 대문자 리스트 | Ⅰ, Ⅱ, Ⅲ... |
+| lower-alpha 또는 lower-latin | 알파벳 소문자 | a, b, c... |
+| upper-alpha 또는 upper-latin | 알파벳 대문자 | A, B, C... |
+| none | 리스트나 숫자를 없앤다 (공백) |  |
+<br>
+
+#### ① list-style-type : 리스트 형태 변경   
+* 기본 태그: __```.클래스명 { list-style-type: 속성값; }```__
+   * 축약: __```.클래스명 { list-style: 속성값; }```__   
+
+__ex>__   
+```
+① head 부분
+  <style>
+    .mylist {
+      list-style-type: square;
+    }
+  </style>
+  
+② body 적용
+  <ul class="mylist">
+    <li>Do it 시리즈</li>
+    <li>된다 시리즈</li>
+  </ul>
+```
+<br>
+
+#### ② list-style-image : 이미지로 리스트 만들기   
+* 기본 태그: __```list-style-image: url(이미지 파일 경로);```__   
+
+__ex>__   
+```
+  ul {
+    list-style-image: url('image/dot.png');
+  }
+```
+<br>
+
+#### ③ list-style-position : 리스트 들여쓰기   
+* 기본 태그: __```list-style-position: 속성값;```__   
+
+#### ◆ list-style-position 속성값
+| 종류 | 설명 |
+| -------- | -------- |
+| inside | 리스트를 안으로 들여쓰기 |
+| outside | 기본값 |
+<br>
+
+__ex>__  
+```
+① head 부분
+  <style>
+    .inside { list-style-position: inside; }
+  </style>
+
+② body 적용
+  <ul class="inside">
+    <li>1번째 리스트</li>
+    <li>2번째 리스트</li>
+  </ul>
+```
+<br>
+
+#### ④ list-style 동시에 사용   
+__ex>__: 따로 사용할 때   
+```
+  ol {
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+  }
+```
+
+__ex>__: 동시에 사용할 때   
+```
+  ol {
+    list-style: lower-alpha inside;
+  }
+```
+<br>
+
+#### ★ 응용하기 (07\list-navi-result.html) ★
+```
+<style>
+  nav {
+    width: 300px;
+    margin: 50px 30px;
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    border: 1px solid #222;
+    padding: 20px;
+    margin: 5px;
+  }
+</style>
+```
+<br>
+<hr>
+
+### (5) 표 스타일
