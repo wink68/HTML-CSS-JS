@@ -11,6 +11,7 @@
 | font-size | 글자 크기 지정 |
 | font-style | 글자를 이탤릭체로 표시할지 지정 |
 | font-weight | 글자 굵기 지정 |
+<br>
 
 ① __font-family__   
 * 기본 태그: __```font-family: 글꼴 이름```__   
