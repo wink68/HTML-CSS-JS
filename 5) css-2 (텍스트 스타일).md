@@ -364,6 +364,9 @@ __ex>__: 동시에 사용할 때
 #### ★ 응용하기 (07\list-navi-result.html) ★
 ```
 <style>
+  a {
+    text-decoration:none;
+  }
   nav {
     width: 300px;
     margin: 50px 30px;
@@ -381,4 +384,68 @@ __ex>__: 동시에 사용할 때
 <br>
 <hr>
 
-### (5) 표 스타일
+### (5) 표 스타일   
+#### ① 표 제목의 위치를 정해주는 ```caption-side```   
+* 기본 태그: __```table { caption-side: 속성값; }```__   
+
+#### ◆ caption-side 속성값
+| 종류 | 설명 |
+| -------- | -------- |
+| top | 표 윗부분에 제목 표시, 기본값 |
+| bottom | 표 아랫부분에 제목 표시 |
+<br>
+
+#### ◇ 표 목록 부분만 색깔 넣기   
+```
+  td {
+    background-cp;pr: #ccc;
+  }
+```
+<br>
+
+__ex>__   
+```
+① head 부분
+  table {
+    caption-side: bottom;
+    border: 1px solid black;  → 표 전체 테두리
+  }
+  td, th {
+    border: 1px dotted black;  → 셀 내부 테두리 (검정 점선)
+    padding: 10px;             → 셀 테두리와 내용 사이 여백
+    text-align: center;
+  }
+  td {
+    background-cp;pr: #ccc;    → 표 목록 부분만 색깔 넣기
+  }
+  
+② body 적용
+  <table>
+    <caption>표 제목</caption>
+```
+<br>
+
+#### ② 표와 셀 테두리를 합쳐주는 border-collapse   
+: 처음에는 표와 셀 테두리가 분리되어 사이에 공간이 생기는데, 이를 합쳐 테두리가 하나뿐인 표로 만들어줌   
+* 기본 태그: __```border-collapse: 속성값```__   
+
+#### ◆ caption-side 속성값
+| 종류 | 설명 |
+| -------- | -------- |
+| collapse | 표와 셀 테두리 하나로 합쳐서 표시 |
+| seperate | 표와 셀 테두리 따로 표시, 기본값 |
+<br>
+
+__ex>__  
+```
+  table {
+    caption-side: bottom;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+```
+<br>
+<br>
+
+#### ③ 셀 사이의 여백 지정하는 border-spacing   
+* 기본 태그: __```border-spacing: 수평거리 수직거리```__   
