@@ -34,8 +34,8 @@ __④ 마진(margin)__: 여러 박스 모델 사이의 여백
 <br>
 <br>
 
-#### (1) 콘텐츠 영역   
-#### ◆ 콘텐츠 영역의 크기를 지정하는 width, height   
+### (1) 콘텐츠 영역   
+#### ◆ ① 콘텐츠 영역의 크기를 지정하는 width, height   
 | 종류 | 설명 |
 | -------- | -------- |
 | 크기 | px나 em 값으로 지정 |
@@ -53,8 +53,8 @@ __ex>__
 ```
 <br>
 
-#### ◆ 박스 모델의 크기를 계산하는 box-sizing   
-* 기본 태그: __```box-sizing: 속성값```__   
+#### ◆ ② 박스 모델의 크기를 계산하는 box-sizing   
+* 기본 태그: __```box-sizing: 속성값;```__   
 
 | 종류 | 설명 |
 | -------- | -------- |
@@ -73,8 +73,8 @@ __ex>__
 ```
 <br>
 
-#### ◆ 박스 모델 그림자 효과 box-shadow   
-* 기본 태그: __```box-shadow: <수평거리> <수직거리> <흐림정도> <번짐정도> <색상> inset```__   
+#### ◆ ③ 박스 모델 그림자 효과 box-shadow   
+* 기본 태그: __```box-shadow: <수평거리> <수직거리> <흐림정도> <번짐정도> <색상> inset;```__   
 
 | 종류 | 설명 |
 | -------- | -------- |
@@ -94,7 +94,110 @@ __ex>__
 <br>
 <hr>
 
-#### (2) 테두리   
+### (2) 테두리   
 #### ◆ 박스 모델 값 지정 방향   
 * __시계 방향__: top → right → bottom → left   
+<br>
 
+#### ◆ ① 테두리 스타일 ```border-style```   
+* 기본 태그: __```border-style: 속성값;```__   
+
+| 종류 | 설명 |
+| -------- | -------- |
+| none | 테두리가 없다 |
+| hidden | 테두리를 감춘다 |
+| solid | 실선 테두리 |
+| dotted | 점선 테두리 |
+| dashed | (점선 같은) 짧은 직선 테두리 |
+| double | 이중선 테두리, border-width값 = 두 선 사이의 간격 |
+| groove | 창에 조각한 것처럼 표시, 홈이 파인듯한 입체 느낌 테두리 |
+| inset | border-collapse: seperate일 경우 창에 박혀있는 것처럼 표시되고, collapse일 경우 groove와 똑같이 표시 |
+| outset | border-collapse: seperate일 경우 창에서 튀어나온 것처럼 표시되고, collapse일 경우 ridge와 똑같이 표시 |
+| ridge | 창에서 튀어나온 것처럼 표시 |
+<br>
+
+#### ◆ ② 테두리 두께 ```border-width```   
+* 기본 태그: __```border-width: 속성값;```__   
+
+| 종류 | 설명 |
+| -------- | -------- |
+| thin, medium, thick | 테두리 두께 지정 |
+| px(픽셀) | 픽셀값으로 두께 지정 |
+
+__ex>__   
+```
+<style>
+#box1 { border-width: 2px; }   → 모든 방향
+#box2 { border-width: thick thin; }   → thick (위, 아래) / thin (좌우)
+#box3 { border-width: thick thin 2px; }   → thick (위) / thin (우 - 왼쪽에도 적용) / 2px (아래)
+</style>
+```
+<br>
+
+#### ◆ ③ 테두리 색상 ```border-color```   
+* 기본 태그: __```border-color: 속성값;```__   
+* 색상이름, 16진수, rgb 등
+
+__ex>__: border 내에 한꺼번에 사용   
+```
+p {
+  padding: 10px;
+  border: 3px dotted blue;
+}
+```
+<br>
+
+#### ◆ ④ 둥근 테두리 ```border-radius```   
+* 기본 태그: __```border-radius: 속성값;```__   
+
+| 종류 | 설명 |
+| -------- | -------- |
+| 크기 | 반지름 크기를 px, em 단위로 설정 |
+| 백분율(%) | 현재 요소(가로/세로 너비)의 크기를 기준으로 비율(%) 설정 |
+<br>
+
+#### ◇ 이미지의 둥근 테두리   
+```
+<head>
+  <style>
+    .circle { border-radius: 50% }
+  </style>
+</head>
+<body>
+  <img class="circle" src="images/photo.jpg(이미지 링크)">
+</body>
+```
+
+#### ◇ 원하는 꼭짓점만 둥글게   
+* 기본 태그: __```border-위치-radius: 속성값;```__   
+* 타원 꼭지점: __```border-위치-radius: <가로 반지름> <세로 반지름>;```__   
+
+__ex1>__   
+```
+#round1 {
+  border: 2px solid blue;
+  border-top-left-radius: 20px;    → 왼쪽 위 둥글게
+  border-top-right-radius: 20px;   → 오른쪽 위 둥글게
+}
+```
+
+__ex2>__   
+```
+.round2 {
+  border-bottom-right-radius : 50% 30%;   → 오른쪽 아래 꼭짓점을 가로 50%, 세로 30% 크기로 라운딩
+}
+```
+
+<br>
+<hr>
+
+### (3) 여백 속성   
+#### ◆ ① margin 속성   
+* 기본 태그: __```margin: 속성값;```__   
+
+| 종류 | 설명 | 예시 |
+| -------- | -------- | -------- |
+| 크기 | 너비와 높이 → px, em 단위로 설정 | margin: 50px; |
+| 백분율(%) | 부모 요소를 기준으로 비율(%) 설정 | margin: 0.1%; |
+| auto | display속성에 지정한 값에 맞게 자동 지정 |  |
+<br>
