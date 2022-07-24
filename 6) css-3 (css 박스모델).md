@@ -2,7 +2,7 @@
    * 공부일: 2022.07.25
 <br>
 
-## 1. CSS와 박스모델   
+## 2. CSS와 박스모델   
 ### 1) 블록 레벨 요소 vs 인라인 레벨 요소   
 #### ① 블록 레벨 요소   
 * 한 줄 전체를 차지하는 태그   
@@ -168,9 +168,9 @@ p {
 </body>
 ```
 
-#### ◇ 원하는 꼭짓점만 둥글게   
-* 기본 태그: __```border-위치-radius: 속성값;```__   
-* 타원 꼭지점: __```border-위치-radius: <가로 반지름> <세로 반지름>;```__   
+#### ◇ 특정 꼭짓점만 둥글게   
+* 기본 태그: __```border-특정 위치-radius: 속성값;```__   
+* 타원 꼭지점: __```border-특정 위치-radius: <가로 반지름> <세로 반지름>;```__   
 
 __ex1>__   
 ```
@@ -194,6 +194,7 @@ __ex2>__
 ### (3) 여백 속성   
 #### ◆ ① margin 속성   
 * 기본 태그: __```margin: 속성값;```__   
+* 특정 방향: __```margin-특정 위치: 속성값;```__
 
 | 종류 | 설명 | 예시 |
 | -------- | -------- | -------- |
@@ -201,3 +202,50 @@ __ex2>__
 | 백분율(%) | 부모 요소를 기준으로 비율(%) 설정 | margin: 0.1%; |
 | auto | display속성에 지정한 값에 맞게 자동 지정 |  |
 <br>
+
+#### ◇ margin 중첩 현상   
+* 요소를 세로로 배치할 경우, 마진과 미진이 만날 때 큰 쪽 값으로 겹쳐지는 것
+   * 50px + 30 px = 50px   
+
+__ex>__: 08\margin-overlap.html 참조   
+```
+   div {
+      width: 200px;
+      height: 100px;
+      margin: 30px;      → 마진 설정
+    }
+    #box1 { background: rgb(0, 77, 243); }
+    #box2 { background: rgb(255, 72, 0); }
+    #box3 { background: rgb(18, 219, 0); }
+    
+  <div id="box1"></div>   → box1의 아래 마진 30px와 box2의 위 마진 30px이 중첩되어 총 60px이 아닌 30px
+  <div id="box2"></div>
+  <div id="box3"></div>
+```
+<br>
+
+#### ◆ ② padding 속성   
+* 테두리와 콘텐츠 내용이 바짝 붙지 않기 위해 padding 설정   
+
+<br>
+
+__ex>__: 07\table-css1.html 참조   
+```
+<style>
+ table {
+   caption-side: bottom;
+   border: 1px solid #222;
+   border-collapse: collapse;
+ }
+ td, th {
+   border: 1px solid #222;
+   padding: 10px;           → 패딩 설정
+ }
+</style>
+```
+
+<br>
+<hr>
+
+### (4) 레이아웃 속성   
+#### ◆ ① 
