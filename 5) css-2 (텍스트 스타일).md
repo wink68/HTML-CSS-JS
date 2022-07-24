@@ -398,7 +398,7 @@ __ex>__: 동시에 사용할 때
 #### ◇ 표 목록 부분만 색깔 넣기   
 ```
   td {
-    background-cp;pr: #ccc;
+    background-color: #ccc;
   }
 ```
 <br>
@@ -416,7 +416,7 @@ __ex>__
     text-align: center;
   }
   td {
-    background-cp;pr: #ccc;    → 표 목록 부분만 색깔 넣기
+    background-color: #ccc;    → 표 목록 부분만 색깔 넣기
   }
   
 ② body 적용
