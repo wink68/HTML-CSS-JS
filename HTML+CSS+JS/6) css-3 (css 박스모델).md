@@ -251,5 +251,28 @@ __ex>__: 07\table-css1.html 참조
 #### ◆ ① display 속성   
 * 배치 방법 결정 → 블록 레벨 요소 / 인라인 레벨 요소   
 
-__ex>__   
+| 종류 | 설명 |
+| -------- | -------- |
+| block | 인라인 레벨 요소 → 블록 레벨 요소 |
+| inline | 블록 레벨 요소 → 인라인 레벨 요소 |
+| inline-block | 전체 형태는 인라인 레벨을 하되, 안의 각 요소는 블록 레벨 요소로 사용 |
+| none | 해당 요소를 화면에 미표시 |
+<br>
 
+__ex> 수평 내비게이션 만들기__: 08\display.html 참조   
+```
+<style>
+  nav ul {
+    list-style: none;  → 리스트 제거
+  }
+  nav ul li {
+    display: inline-block;
+    border: 1px solid #222;
+    padding: 20px;
+    margin: 0 20px;
+  }
+</style>
+```
+<br>
+
+#### ◆ ② float 속성   
