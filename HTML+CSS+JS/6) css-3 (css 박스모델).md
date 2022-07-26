@@ -355,4 +355,61 @@ __ex>__: 사진을 문서 왼쪽에 배치
 <hr>
 
 ### (5) 웹 요소의 위치 지정하기   
-#### ◆ ①
+#### ◆ ① 위치 속성   
+| 종류 | 설명 |
+| -------- | -------- |
+| left | 왼쪽으로 얼마나 떨어져있는지 지정 |
+| right | 오른쪽으로 얼마나 떨어져있는지 지정 |
+| top | 위쪽으로 얼마나 떨어져있는지 지정 |
+| bottom | 아래쪽으로 얼마나 떨어져있는지 지정 |
+<br>
+
+#### ◆ ② position 속성   
+| 종류 | 설명 |
+| -------- | -------- |
+| static | 작성 순서대로 배치, 기본값 |
+| relative | 작성 순서대로 배치 & 위치값 지정 가능 |
+| absolute | 부모요소나 상위요소의 relative를 기준으로 위치를 지정 |
+| fixed | 위치값 지정 & 고정 → 스크롤 막대를 내리더라도 그 위치에 고정 (배너, 광고 등에 활용) |
+
+__ex1>__   
+```
+<style>
+  #static { position:static; }
+  #relative-1{ position:relative; }
+  #relative-2 {
+    position:relative;   /* 포지셔닝 - relative */
+    left:100px;  /* 왼쪽에서 100px 떨어지게 */
+    top:-50px;   /* 위쪽에서 -50px 떨어지게 (위로 이동) */
+  }
+  #fixed {
+    width:100px;
+    height:100px
+    background-color:#222;
+    position:fixed;  /* 포지셔닝 - fixed */
+    right:30px;  /* 오른쪽에서 30px 떨어지게 */
+    top:30px;  /* 위쪽에서 30px 떨어지게 */
+  }
+</style>
+```
+<br>
+
+__ex>__: __```absolute```__ 예시   
+```
+#contents {
+ background:url("../images/bg.jpg") no-repeat;
+ background-size:cover;
+ width:800px;
+ height:500px;
+ margin:0 auto;
+ position:relative;    → 기준
+}
+h1 { 
+  color:#fff; 
+  font-size:120px;
+  text-shadow: 2px 3px 0 #000;      
+  position:absolute;   → 기준을 중심으로 배치
+  right:100px;
+  bottom:100px;
+}
+```
