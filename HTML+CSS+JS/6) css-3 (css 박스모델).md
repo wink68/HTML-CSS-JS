@@ -1,5 +1,5 @@
 ## 오늘 공부한 것
-   * 공부일: 2022.07.25
+   * 공부일: 2022.07.25-26
 <br>
 
 ## 2. CSS와 박스모델   
@@ -251,5 +251,165 @@ __ex>__: 07\table-css1.html 참조
 #### ◆ ① display 속성   
 * 배치 방법 결정 → 블록 레벨 요소 / 인라인 레벨 요소   
 
-__ex>__   
+| 종류 | 설명 |
+| -------- | -------- |
+| block | 인라인 레벨 요소 → 블록 레벨 요소 |
+| inline | 블록 레벨 요소 → 인라인 레벨 요소 |
+| inline-block | 전체 형태는 인라인 레벨을 하되, 안의 각 요소는 블록 레벨 요소로 사용 |
+| none | 해당 요소를 화면에 미표시 |
+<br>
 
+__ex> 수평 내비게이션 만들기__: 08\display.html 참조   
+```
+<style>
+  nav ul {
+    list-style: none;  → 리스트 제거
+  }
+  nav ul li {
+    display: inline-block;
+    border: 1px solid #222;
+    padding: 20px;
+    margin: 0 20px;
+  }
+</style>
+```
+<br>
+
+#### ◆ ②-1 float 속성   
+* 왼쪽 or 오른쪽 배치
+
+| 종류 | 설명 |
+| -------- | -------- |
+| left | 해당 요소를 문서의 왼쪽에 배치 |
+| right | 해당 요소를 문서의 오른쪽에 배치 |
+| none | 좌우 어느 쪽에도 배치 X, 기본값 |
+
+__ex>__: 사진을 문서 왼쪽에 배치   
+```
+<head>
+  <style>
+    img {
+      float:left;  /* 왼쪽에 떠 있게 */
+      margin-right:40px;
+    }
+  </style>
+</head>
+<body>
+  <img src="images/tree.png">
+</body>
+```
+<br>
+
+#### ◆ ②-2 clear 속성
+* float 속성 해제   
+
+| 종류 | 설명 |
+| -------- | -------- |
+| left | float: left를 해제 |
+| right | float: right를 해제 |
+| both | float: left와 right 둘 다 해제 |
+<br>
+
+#### ◇ float로 3단 레이아웃 만들기   
+* 08\3column-result.html, 01\css\3column-result.css 참조   
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/180898329-2336d34d-ef62-44d8-a5cb-0d986ea5e6dd.JPG width="600px" alt="box model"></a>   
+<br>
+
+```
+#container {
+  width:1200px;   /* 내용 전체의 너비 */
+  margin:20px auto;  /* 내용을 화면 가운데 배치하도록 좌우 마진을 auto로 */
+}
+#header{
+  width:100%;  /* 부모 요소의 너비와 똑같게 */
+  height:120px;  /* 헤더의 높이 */
+  background-color:#acacac;
+}
+#left-sidebar {
+  width: 250px;   /* 사이드바의 너비 */
+  height:600px;  /* 사이드바의 높이 */
+  background-color:#e9e9e9;
+  float: left;  /* 왼쪽으로 플로팅 */
+}
+#contents {
+  width: 800px;  /* 본문의 너비 */
+  height:600px;   /* 본문의 높이 */
+  background-color:#f7f7f7;
+  float: left;  /* 왼쪽으로 플로팅 */
+}
+#right-sidebar {
+  width: 150px;   /* 사이드바의 너비 */
+  height:600px;  /* 사이드바의 높이 */
+  float: left;  /* 왼쪽으로 플로팅 */
+  background-color:#e9e9e9;
+}
+#footer {
+  width:100%;  /* 부모 요소의 너비와 똑같게  */
+  height:100px;  /* 푸터의 높이 */
+  background-color:#888888;
+  clear:left;		/* 플로팅 해제 */
+}
+```
+
+<br>
+<hr>
+
+### (5) 웹 요소의 위치 지정하기   
+#### ◆ ① 위치 속성   
+| 종류 | 설명 |
+| -------- | -------- |
+| left | 왼쪽으로 얼마나 떨어져있는지 지정 |
+| right | 오른쪽으로 얼마나 떨어져있는지 지정 |
+| top | 위쪽으로 얼마나 떨어져있는지 지정 |
+| bottom | 아래쪽으로 얼마나 떨어져있는지 지정 |
+<br>
+
+#### ◆ ② position 속성   
+| 종류 | 설명 |
+| -------- | -------- |
+| static | 작성 순서대로 배치, 기본값 |
+| relative | 작성 순서대로 배치 & 위치값 지정 가능 |
+| absolute | 부모요소나 상위요소의 relative를 기준으로 위치를 지정 |
+| fixed | 위치값 지정 & 고정 → 스크롤 막대를 내리더라도 그 위치에 고정 (배너, 광고 등에 활용) |
+
+__ex1>__   
+```
+<style>
+  #static { position:static; }
+  #relative-1{ position:relative; }
+  #relative-2 {
+    position:relative;   /* 포지셔닝 - relative */
+    left:100px;  /* 왼쪽에서 100px 떨어지게 */
+    top:-50px;   /* 위쪽에서 -50px 떨어지게 (위로 이동) */
+  }
+  #fixed {
+    width:100px;
+    height:100px
+    background-color:#222;
+    position:fixed;  /* 포지셔닝 - fixed */
+    right:30px;  /* 오른쪽에서 30px 떨어지게 */
+    top:30px;  /* 위쪽에서 30px 떨어지게 */
+  }
+</style>
+```
+<br>
+
+__ex>__: __```absolute```__ 예시   
+```
+#contents {
+ background:url("../images/bg.jpg") no-repeat;
+ background-size:cover;
+ width:800px;
+ height:500px;
+ margin:0 auto;
+ position:relative;    → 기준
+}
+h1 { 
+  color:#fff; 
+  font-size:120px;
+  text-shadow: 2px 3px 0 #000;      
+  position:absolute;   → 기준을 중심으로 배치
+  right:100px;
+  bottom:100px;
+}
+```
