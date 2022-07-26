@@ -146,15 +146,42 @@ __ex>__: 왼쪽 위부터
   #bg6 { background-size:cover;}      /* 요소를 완전히 덮도록 배경 이미지 표시 */
 ```
 
-<a href="#"><img src=https://user-images.githubusercontent.com/108077414/180956410-65e4336d-6e5f-48d8-9041-190ddec828ef.JPG width=50% alt="box model"></a>   
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181079660-584655e9-dcaa-4906-9397-b32964dacdf7.JPG width=50% alt="box model"></a>   
 
 <br>
 <hr>
 
 ### 3) 그라데이션 효과      
 #### (1) 선형 그라데이션   
-* 기본 태그: __```;```__   
+* 기본 태그: __```linear-gradient(to <도착방향 또는 각도>, <색상1 색상2>);```__   
+* 가로, 세로, 대각선 방향으로 나타나는 그라데이션   
+<br>
+
+__ex1>__   
+```
+.grad {
+ 	background: blue;
+  background: linear-gradient(to right bottom, blue, white);      /* 왼쪽 위에서 오른쪽 아래 방향으로, 파랑에서 흰색으로 */
+}
+```
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181079783-0ef46397-654a-4aba-a28f-44e58e226188.JPG width=400 alt="box model"></a>   
+
+<br>
+
+__ex2>__: 선형 그라데이션 (각도)   
+* 맨 위를 0도로 시계 방향으로 90도, 180도, 270도   
+```
+.grad { 
+  background: #f00;                                    /* CSS3를 지원하지 않는 브라우저용 */
+  background: linear-gradient(45deg, #f00, #fff);      /* 45도 (오른쪽 위)방향으로, 빨간색에서 흰색으로 */
+}
+```
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181080636-7e04a798-6e79-4837-804a-f2864be587f0.JPG width=400 alt="box model"></a>   
+
 <br>
 
 #### (2) 원형 그라데이션   
 * 기본 태그: __```;```__   
+* 원의 중심에서부터 동심원을 그리며 나타나는 그라데이션   
+
+
