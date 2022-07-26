@@ -101,4 +101,60 @@ __ex>__
 #### (4) 배경 이미지의 위치 고정
 * 기본 태그: __```background-attachment: 속성값;```__   
 
-__ex>__   
+| 종류 | 설명 |
+| -------- | -------- |
+| scroll | 스크롤바를 움직이면 배경 이미지도 스크롤 위치에 따라 사라짐, 기본값 |
+| fixed | 스크롤바를 내려도 위치 고정 |
+<br>
+
+#### ◆ 응용: background 속성 한꺼번에 사용   
+__ex>__: 따로 사용   
+```
+body {
+  background-image: url('images/bg4.png');
+  background-repeat: no-repeat;               /* 이미지 반복 X */
+  background-position: center bottom;         /* 이미지 중앙 아래 배치 */
+  background-attachment: fixed;               /* 이미지 고정 */
+}
+```
+
+__ex>__: 속성 한꺼번에 사용   
+```background: url('image/bg4.png') no-repeat center bottom fixed;```   
+
+<br>
+
+#### (5) 배경 이미지 크기 조절 background-size   
+* 기본 태그: __```background-size: 속성값;```__   
+
+| 종류 | 설명 |
+| -------- | -------- |
+| auto | 원래 이미지 크기, 기본값 |
+| contain | 요소 안에 배경 이미지가 다 들어오도록 설정 |
+| cover | 배경 이미지로 요소 전체를 채우도록 설정 |
+| 크기 | 가로, 세로 값을 px(픽셀)로 지정 가능, "값 하나만 할 경우 = 가로" |
+| 백분율 (%) | 배경 이미지가 들어갈 요소를 기준으로 설정 |
+<br>
+
+__ex>__: 왼쪽 위부터   
+① auto, ② 가로 200px, ③ 가로 50%, ④ 가로 세로 100%, ⑤ contain, ⑥ cover   
+```
+  #bg1 { background-size:auto;}       /* 원래 배경 이미지 크기로 표시 */
+  #bg2 { background-size:200px;}      /* 너비는 200px, 높이는 자동 계산 */
+  #bg3 { background-size:50%;}        /* 배경 이미지 너비는 요소 너비의 50%, 높이는 자동 계산 */
+  #bg4 { background-size:100% 100%;}  /* 배경 이미지 너비와 높이는 요소 너비의 100%, 요소 높이의 100% */ 
+  #bg5 { background-size:contain;}    /* 요소 안에 배경 이미지가 다 보이도록 표시 */
+  #bg6 { background-size:cover;}      /* 요소를 완전히 덮도록 배경 이미지 표시 */
+```
+
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/180956410-65e4336d-6e5f-48d8-9041-190ddec828ef.JPG width=50% alt="box model"></a>   
+
+<br>
+<hr>
+
+### 3) 그라데이션 효과      
+#### (1) 선형 그라데이션   
+* 기본 태그: __```;```__   
+<br>
+
+#### (2) 원형 그라데이션   
+* 기본 태그: __```;```__   
