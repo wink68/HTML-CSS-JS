@@ -1,5 +1,5 @@
 ## 오늘 공부한 것
-   * 공부일: 2022.07.26
+   * 공부일: 2022.07.26-27
 <br>
 
 ## 3. CSS와 배경 꾸미기   
@@ -111,10 +111,10 @@ __ex>__
 __ex>__: 따로 사용   
 ```
 body {
-  background-image: url('images/bg4.png');
-  background-repeat: no-repeat;               /* 이미지 반복 X */
-  background-position: center bottom;         /* 이미지 중앙 아래 배치 */
-  background-attachment: fixed;               /* 이미지 고정 */
+    background-image: url('images/bg4.png');
+    background-repeat: no-repeat;               /* 이미지 반복 X */
+    background-position: center bottom;         /* 이미지 중앙 아래 배치 */
+    background-attachment: fixed;               /* 이미지 고정 */
 }
 ```
 
@@ -149,10 +149,11 @@ __ex>__: 왼쪽 위부터
 <a href="#"><img src=https://user-images.githubusercontent.com/108077414/181079660-584655e9-dcaa-4906-9397-b32964dacdf7.JPG width=50% alt="box model"></a>   
 
 <br>
+<br>
 <hr>
 
 ### 3) 그라데이션 효과      
-#### (1) 선형 그라데이션   
+### (1) 선형 그라데이션   
 * 기본 태그: __```linear-gradient(to <도착방향 또는 각도>, <색상1 색상2>);```__   
 * 가로, 세로, 대각선 방향으로 나타나는 그라데이션   
 <br>
@@ -160,8 +161,8 @@ __ex>__: 왼쪽 위부터
 __ex1>__   
 ```
 .grad {
- 	background: blue;
-  background: linear-gradient(to right bottom, blue, white);      /* 왼쪽 위에서 오른쪽 아래 방향으로, 파랑에서 흰색으로 */
+    background: blue;
+    background: linear-gradient(to right bottom, blue, white);      /* 왼쪽 위에서 오른쪽 아래 방향으로, 파랑에서 흰색으로 */
 }
 ```
 <a href="#"><img src=https://user-images.githubusercontent.com/108077414/181079783-0ef46397-654a-4aba-a28f-44e58e226188.JPG width=400 alt="box model"></a>   
@@ -180,8 +181,131 @@ __ex2>__: 선형 그라데이션 (각도)
 
 <br>
 
-#### (2) 원형 그라데이션   
-* 기본 태그: __```;```__   
+__◇ 색상 중지점(color-stop)__: 그라데이션에서 바뀌는 색 → 2가지 이상의 색 표현   
+__ex>__   
+```
+.grad {
+    background: #06f; /* css3를 지원하지 않는 브라우저용 */
+    background: linear-gradient(to bottom, #06f, white 30%, #06f);    /* 위에서부터 30% 위치에 색상 중지점 지정 */
+}
+```
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181083661-d12bdb78-d7b0-47a2-8407-f3458838588b.JPG width=400 alt="box model"></a> 
+
+<br>
+<hr>
+
+### (2) 원형 그라데이션   
+* 기본 태그: __```radial-gradient(<모양> <크기> at <위치>, <색상 중지점>);```__   
 * 원의 중심에서부터 동심원을 그리며 나타나는 그라데이션   
+   * 모양 기본값: 타원형(ellipse)
+<br>
+
+__ex>__   
+```
+/* 타원형으로 흰색, 노란색, 빨간색으로 바뀌는 그러데이션 */
+.grad1{
+    background:radial-gradient(white, yellow, red);
+}
 
 
+/* 원형 그러데이션 */
+/* 원형으로 위치(왼쪽 20% 위 20%)에서 흰색, 노란색, 빨간색으로 바뀌는 그러데이션 */
+.grad2{
+    background:radial-gradient(circle at 20% 20% white, yellow, red);
+}
+```
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181090401-258693e1-5f4d-429f-a05c-023cbbcbdbe8.JPG width=600 alt="box model"></a> 
+<br>
+<br>
+
+#### (2-1) 크기 속성값   
+| 종류 | 설명 |
+| --- | --- |
+| closest-side | 그러데이션 중심에서 가장 가까운 측면에 닿을 때까지 |
+| closest-corner | 그러데이션 중심에서 가장 가까운 꼭짓점에 닿을 때까지 |
+| farthest-side | 그러데이션 중심에서 가장 먼 측면에 닿을 때까지 |
+| farthest-corner | 그러데이션 중심에서 가장 먼 꼭짓점에 닿을 때까지 |
+<br>
+
+__ex>__   
+① 가장 가까운 측면, ② 가장 가까운 꼭짓점, ③ 가장 먼 측면, ④ 가장 먼 꼭짓점   
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181091692-e98d9ef8-b5d0-44f9-8aa4-c6b621ee286c.JPG width=80% alt="box model"></a> 
+<br>
+```
+#div1{
+    background:darkgreen;
+    background:radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+}
+
+#div2{
+    background:darkgreen;
+    background:radial-gradient(circle closest-corner at 30% 40%, white, yellow, green);
+}
+
+#div3{
+    background:darkgreen;
+    background:radial-gradient(circle farthest-side at 30% 40%, white, yellow, green);
+}
+
+#div4{
+    background:darkgreen;
+    background:radial-gradient(circle farthest-corner at 30% 40%, white, yellow, green);
+}
+```
+<br>
+<br>
+
+#### (2-2) 위치   
+* __```at 위치```__   
+* __위치 속성값__: left, right, top, bottom, center, 백분율(%)
+   * 위치를 생략할 경우, ```center```로 인식   
+
+__ex>__   
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181094479-4d350658-eaf3-42fe-8d9e-79b01107ea8c.JPG width=15% alt="box model"></a> 
+```
+/* 20% 20%에서 시작하여 흰색에서 파란색으로 바뀌는 원형 그러데이션 */
+.grad {
+    background: blue;  
+    background: radial-gradient(circle at 20% 20%,white,blue);    
+}
+```
+<br>
+<br>
+
+
+#### (2-3) 그라데이션 패턴   
+* 선형 그라데이션 패턴: __```repeating-linear-gradient()```__   
+* 원형 그라데이션 패턴: __```repeating-radial-gradient()```__   
+<br>
+
+__ex1>__: 끝이 선명하지 않은 그라데이션 패턴   
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181098809-8383f8a3-ba46-4f09-871d-17174898e7c0.JPG width=60% alt="box model"></a> 
+```
+.grad1 {
+    background: red;
+    background: repeating-linear-gradient(yellow, red 20px); 
+}
+
+.grad2 {
+    background: #ccc;
+    background: repeating-radial-gradient(circle, white, #ccc 10%); 
+}
+```
+<br>
+<br>
+
+__ex2>__: 끝이 선명한 그라데이션 패턴   
+* 09\pattern.html 참조   
+
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/181099664-80366660-0673-495d-a7c6-0cdaceaa4a2c.JPG width=60% alt="box model"></a> 
+```
+.grad1 {
+    background: red;
+    background: repeating-linear-gradient(yellow, yellow 20px, red 20px, red 40px);
+}
+
+.grad2 {
+    background: #ccc;
+    background: repeating-radial-gradient(circle, white, white 10%, #ccc 10%, #ccc 20%);
+}
+```
