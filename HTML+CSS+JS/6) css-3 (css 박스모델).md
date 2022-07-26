@@ -1,5 +1,5 @@
 ## 오늘 공부한 것
-   * 공부일: 2022.07.25
+   * 공부일: 2022.07.25-26
 <br>
 
 ## 2. CSS와 박스모델   
@@ -275,4 +275,84 @@ __ex> 수평 내비게이션 만들기__: 08\display.html 참조
 ```
 <br>
 
-#### ◆ ② float 속성   
+#### ◆ ②-1 float 속성   
+* 왼쪽 or 오른쪽 배치
+
+| 종류 | 설명 |
+| -------- | -------- |
+| left | 해당 요소를 문서의 왼쪽에 배치 |
+| right | 해당 요소를 문서의 오른쪽에 배치 |
+| none | 좌우 어느 쪽에도 배치 X, 기본값 |
+
+__ex>__: 사진을 문서 왼쪽에 배치   
+```
+<head>
+  <style>
+    img {
+      float:left;  /* 왼쪽에 떠 있게 */
+      margin-right:40px;
+    }
+  </style>
+</head>
+<body>
+  <img src="images/tree.png">
+</body>
+```
+<br>
+
+#### ◆ ②-2 clear 속성
+* float 속성 해제   
+
+| 종류 | 설명 |
+| -------- | -------- |
+| left | float: left를 해제 |
+| right | float: right를 해제 |
+| both | float: left와 right 둘 다 해제 |
+<br>
+
+#### ◇ float로 3단 레이아웃 만들기   
+* 08\3column-result.html, 01\css\3column-result.css 참조   
+<a href="#"><img src=https://user-images.githubusercontent.com/108077414/180898329-2336d34d-ef62-44d8-a5cb-0d986ea5e6dd.JPG width="600px" alt="box model"></a>   
+<br>
+
+```
+#container {
+  width:1200px;   /* 내용 전체의 너비 */
+  margin:20px auto;  /* 내용을 화면 가운데 배치하도록 좌우 마진을 auto로 */
+}
+#header{
+  width:100%;  /* 부모 요소의 너비와 똑같게 */
+  height:120px;  /* 헤더의 높이 */
+  background-color:#acacac;
+}
+#left-sidebar {
+  width: 250px;   /* 사이드바의 너비 */
+  height:600px;  /* 사이드바의 높이 */
+  background-color:#e9e9e9;
+  float: left;  /* 왼쪽으로 플로팅 */
+}
+#contents {
+  width: 800px;  /* 본문의 너비 */
+  height:600px;   /* 본문의 높이 */
+  background-color:#f7f7f7;
+  float: left;  /* 왼쪽으로 플로팅 */
+}
+#right-sidebar {
+  width: 150px;   /* 사이드바의 너비 */
+  height:600px;  /* 사이드바의 높이 */
+  float: left;  /* 왼쪽으로 플로팅 */
+  background-color:#e9e9e9;
+}
+#footer {
+  width:100%;  /* 부모 요소의 너비와 똑같게  */
+  height:100px;  /* 푸터의 높이 */
+  background-color:#888888;
+  clear:left;		/* 플로팅 해제 */
+}
+```
+
+<br>
+<hr>
+
+### (5) 웹 요소의 위치 지정하기   
+#### ◆ ①
