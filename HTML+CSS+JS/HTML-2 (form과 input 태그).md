@@ -1,6 +1,4 @@
 ## 오늘 공부한 것
-   * 공부일: 2022.07.21-22
-<br>
 
 ### ◇ 참고 자료   
 - [caniuse.com](https://caniuse.com/)   
