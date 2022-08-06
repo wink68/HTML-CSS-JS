@@ -15,7 +15,7 @@
 
 __ex>__   
 ```
-<body>
+   <body>
 	<h1 id="heading">자바스크립트</h1>
 	<p id="text">위 텍스트를 클릭해 보세요</p>
 
@@ -25,7 +25,20 @@ __ex>__
 	  heading.style.color = "red";
 	  }
 	</script>
-</body>
+   </body>
 ```
 
 #### (2) 외부 스크립트 파일 연결해서 작성하기   
+* 기본 태그: __```<script src="외부 스크립트 파일 경로"></script>```__   
+* __```확장자 *.js```__ 로 저장   
+
+__ex>__   
+```
+   <body>
+	<h1 id="heading">자바스크립트</h1>
+	<p id="text">위 텍스트를 클릭해 보세요</p>
+	
+	<script src="js/change-color.js"></script>
+   </body>
+```
+
